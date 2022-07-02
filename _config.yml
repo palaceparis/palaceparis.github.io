@@ -123,6 +123,7 @@ theme: butterfly
 deploy:
   type: git
   repo: https://github.com/palaceparis/palaceparis.github.io.git
+  branch: master
 
 # Life
 douban:
