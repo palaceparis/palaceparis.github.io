@@ -9,7 +9,7 @@ menu:
   Categories: /categories/ || fas fa-folder-open
   # Life||fas fa-list:
     # Music: /music/ || fas fa-music
-  Books: /books/ || fas fa-book
+  # Books: /books/ || fas fa-book
   # Link: /link/ || fas fa-link
   About: /about/ || fas fa-heart
 
