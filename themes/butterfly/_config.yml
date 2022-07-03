@@ -624,7 +624,7 @@ preloader: false
 
 aside:
   enable: true
-  hide: true
+  hide: false
   button: true
   mobile: true # display on mobile
   position: left # left or right
