@@ -13,7 +13,8 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://palaceparis.github.io
+# url: http://palaceparis.github.io
+url: http://gongtony.com
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -120,9 +121,14 @@ theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
+# deploy:
+#   type: git
+#   repo: https://github.com/palaceparis/palaceparis.github.io.git
+#   branch: master
+
 deploy:
   type: git
-  repo: https://github.com/palaceparis/palaceparis.github.io.git
+  repo: git@16.163.56.252:blog.git
   branch: master
 
 # Life
