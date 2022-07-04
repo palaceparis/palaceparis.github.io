@@ -1,7 +1,12 @@
 ---
-title: "HEXO 本地搭建 + Butterfly 主题选择 + Github / 个人服务器部署"
+title: "HEXO Blog Construction"
 category: Other
 date: 2022-07-04 04:13:44
+tags: 
+    - "HEXO" 
+    - "Butterfly" 
+    - "Github" 
+    - "Linux Server"
 ---
 
 # HEXO Local Construction <a name="pookie"></a>
