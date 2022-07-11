@@ -46,3 +46,5 @@ Extract href and remove the link in str_c
           html_attr('href') %>%    
           str_c("https://broker.skyallmarkets.com", .)    
 ```
+
+Task_images_pdf
