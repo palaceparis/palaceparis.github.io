@@ -39,7 +39,7 @@ Use when rsDriver cannot run.
 
 Locate the search box on google search page
 
-# webElem1$clearElement() 
+# webElem1$clearElement()
 
 clear the text previously entered
 
@@ -54,11 +54,11 @@ Retrieve data from website using **Value** only to locate in findElements.
 Example as below:
 
 ```
-googLinkText <- remDr$findElements(value = "//h3[@class = 'LC20lb MBeuO DKV0Md']")
+googLinkText <- remDr$findElements(value = "//h3[@class ='LC20lb MBeuO DKV0Md']")
 linkHeading <- sapply(googLinkText, function(x) x$getElementText())
-googLinkDesc <- remDr$findElements(value = "//div[@class = 'VwiC3b yXK7lf MUxGbd yDYNvb lyLwlc lEBKkf']")
+googLinkDesc <- remDr$findElements(value = "//div[@class ='VwiC3b yXK7lf MUxGbd yDYNvb lyLwlc lEBKkf']")
 linkDescription <- sapply(googLinkDesc, function(x) x$getElementText())
-googLinkHref <- remDr$findElements(value = "//div[@class = 'yuRUbf']/a")
+googLinkHref <- remDr$findElements(value = "//div[@class ='yuRUbf']/a")
 linkHref <- sapply(
 googLinkHref,
 function(x) x$getElementAttribute("href")
@@ -73,7 +73,7 @@ Reset browser port
 
 Launch the dafault chrome browser
 
-Example as below: 
+Example as below:
 
 ```
 cprof <- getChromeProfile(
@@ -90,11 +90,11 @@ remDr$navigate("https://my.skyamarkets.com/Admin/login?ReturnUrl=%2FSuperAdmin%2
 Extract href and remove the link in str_c
 
 ```
-        remDr$getPageSource()[[1]] %>%      
-          read_html() %>%      
-          html_nodes(".lean-table-cell a") %>%      
-          html_attr('href') %>%    
-          str_c("https://broker.skyallmarkets.com", .)    
+        remDr$getPageSource()[[1]] %>%
+          read_html() %>%
+          html_nodes(".lean-table-cell a") %>%
+          html_attr('href') %>%
+          str_c("https://broker.skyallmarkets.com", .)
 ```
 
 Task_images_pdf
