@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Application of Statistical Machine Learning Methods on Nutrition Data | Mingze (Tony) Gong</title><meta name="keywords" content="Coursework,Projects,R Language,Visualization,Machine Learning"><meta name="author" content="Mingze (Tony) Gong"><meta name="copyright" content="Mingze (Tony) Gong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="A cross-disciplinary project where Statistics and Data Science students will form teams with Nutrition students to solve a real world problem using Statistical Machine Learning methods.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Application of Statistical Machine Learning Methods on Nutrition Data">
+<meta property="og:url" content="http://palaceparis.github.io/2022/12/07/ML-Project-at-USYD/index.html">
+<meta property="og:site_name" content="Mingze (Tony) Gong">
+<meta property="og:description" content="A cross-disciplinary project where Statistics and Data Science students will form teams with Nutrition students to solve a real world problem using Statistical Machine Learning methods.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cn.bing.com/th?id=OHR.HemakutaHill_ZH-CN7438439036_1920x1080.jpg">
+<meta property="article:published_time" content="2022-12-07T10:38:09.000Z">
+<meta property="article:modified_time" content="2023-09-13T13:02:03.032Z">
+<meta property="article:author" content="Mingze (Tony) Gong">
+<meta property="article:tag" content="Coursework">
+<meta property="article:tag" content="Projects">
+<meta property="article:tag" content="R Language">
+<meta property="article:tag" content="Visualization">
+<meta property="article:tag" content="Machine Learning">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cn.bing.com/th?id=OHR.HemakutaHill_ZH-CN7438439036_1920x1080.jpg"><link rel="shortcut icon" href="https://s2.loli.net/2022/07/01/pHyY9QSxgDkC4Ld.png"><link rel="canonical" href="http://palaceparis.github.io/2022/12/07/ML-Project-at-USYD/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"SIMLP32BII","apiKey":"d3e624a7ea542506a42fce1a6f911b68","indexName":"HEXO Search","hits":{"per_page":6},"languages":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}.","hits_stats":"${hits} results found in ${time} ms"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Application of Statistical Machine Learning Methods on Nutrition Data',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-09-13 21:02:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2022/07/01/pHyY9QSxgDkC4Ld.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Articles</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cn.bing.com/th?id=OHR.HemakutaHill_ZH-CN7438439036_1920x1080.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Mingze (Tony) Gong</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Articles</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Application of Statistical Machine Learning Methods on Nutrition Data</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-12-07T10:38:09.000Z" title="Created 2022-12-07 18:38:09">2022-12-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-09-13T13:02:03.032Z" title="Updated 2023-09-13 21:02:03">2023-09-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Projects/">Projects</a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p> <font size="6"><strong>Does ultra-processed food consumption significantly increase obesity risk in low-socioeconomic (SES) groups in Australia?</strong> </font> </p>
+<p> Zoe Zhang, Tony Gong, Jasmine Leung, Aoni Fu, Haoru Yang, Ethan Li</p>
+<p> 25 pages, Date written: November 2021</p>
+<p> Since I was mainly responsible for the modelling part of this project, I created the following technical report which could be accessed from <a href="https://palaceparis.github.io/STAT3888-ML-Models/PROJECT1_TEAM15.html"><i class="fab fa-github"></i> here</a>. </p>
+<p> The source coud is available <a target="_blank" rel="noopener" href="https://github.com/palaceparis/STAT3888-ML-Models/blob/main/PROJECT1_TEAM15.Rmd"><i class="fab fa-github"></i> here</a></p>
+<h1 id="Full-Report"><a href="#Full-Report" class="headerlink" title="Full Report"></a>Full Report</h1><p>Please refer to <a target="_blank" rel="noopener" href="https://1drv.ms/b/s!AnOK3mGvjoYogsNPaBki-7Y09lzhCw?e=redYje"><i class="fa fa-cloud"></i> Does ultra-processed food consumption significantly increase obesity risk in low-socioeconomic (SES) groups in Australia?</a> for the full report.</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/palaceparis/STAT3888-ML-Models/blob/main/NUTM_STAT3888_Project_final_report.pdf">Final Report - <i class="fab fa-github"></i> GitHub备份</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://share.weiyun.com/h8iENUrm">Full Report - 腾讯微云存档备份</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://shimo.im/files/e1Az4Q6V7MTgoGqW/">Full Report - 石墨存档备份</a></p>
+</li>
+</ul>
+<h1 id="Final-Presentation"><a href="#Final-Presentation" class="headerlink" title="Final Presentation"></a>Final Presentation</h1><p> This project includes three presentations which was spread across an academic semster. Please refer to <a target="_blank" rel="noopener" href="https://1drv.ms/p/s!AnOK3mGvjoYogr5ys3wOC5wStQwg3g?e=AO3wZU"><i class="fa fa-cloud"></i> An Interdisciplinary Project Review: Nutrition + Statistics</a> for the slides of the final presentation. </p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/palaceparis/STAT3888-ML-Models/blob/main/Final%20Presentation.pptx">Final Presentation - <i class="fab fa-github"></i> GitHub备份</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://share.weiyun.com/oMTKhnux">Final Presentation - 腾讯微云存档备份</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://shimo.im/files/2wAlX85OObFEPBAP/">Final Presentation - 石墨存档备份</a></p>
+</li>
+</ul>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>Consumption of ultra-processed foods (UPF) and obesity prevalence have been increasing simultaneously. Research has shown that UPF consumption increases obesity risks among low socioeconomic (SES) populations in the United States. When compared to nutritious food, UPF is more enticing to those with low SES background due to the affordability. The current study provides a novel investigation into whether UPF consumption significantly contributes to greater obesity prevalence in low-SES groups in Australia. By using the methods of classification tree, Random Forest, Logistic Regression, K-Nearest Neighbour and NOVA food classification system. Although results revealed that low SES individuals consume more UPF in Australia, increasing consumption of UPF was not found to significantly contribute to obesity. This presents implications for government initiatives targeting increased UPF consumption by suggesting shifts in resource allocation from low-SES focused policies (e.g., subsidies on healthy foods) to more broadly encourage healthier food environments.</p>
+<p><strong>Keywords</strong>: Machine Learning, Classification Tree, Random Forest, Logistic Regression, K Means Clustering, Neural Network, NOVA food classification system</p>
+<p><strong>Following aims will be explored:</strong></p>
+<ol>
+<li>Whether low-socioeconomic groups consume more ultra-processed food compared to other socioeconomic groups.</li>
+<li>Whether increased ultra-processed food ratio leads to lower protein and increased energy intake ratio among the low-socioeconomic group.</li>
+<li>Whether ultra-processed food consumption is a significant contributor to obesity.</li>
+</ol>
+<p>It is hypothesised that ultra-processed food consumption increases obesity risk in low-socioeconomic groups in Australia.</p>
+<h1 id="Aim-1-Whether-low-SES-groups-consume-more-UPF-compared-to-other-SES-groups"><a href="#Aim-1-Whether-low-SES-groups-consume-more-UPF-compared-to-other-SES-groups" class="headerlink" title="Aim 1: Whether low SES groups consume more UPF compared to other SES groups"></a>Aim 1: Whether low SES groups consume more UPF compared to other SES groups</h1><p>In investigation of whether low SES groups consume more UPF than high SES groups, an overview of UPF consumption across SES groups divided into low and high levels, without any adjustments to important confounding variables is considered (Figure 1). The density plots are separated into obese and non-obese groups for both high and low SES groups. Findings consistently demonstrate higher UPF consumption in low compared to high SES groups, irrespective of obesity status. </p>
+<figure align="center">
+  <img src="https://i.328888.xyz/2022/12/09/foNtc.png" alt="my alt text"/>
+  <figcaption>
+   <font size="2"> 
+   Figure 1. Scaled Density Plot of Between-Group UPF Consumption </font>
+  </figcaption>
+</figure>
+
+<h1 id="Aim-2：Whether-increased-UPF-ratio-leads-to-lower-protein-and-increased-energy-intake-ratio-among-the-low-SES-group"><a href="#Aim-2：Whether-increased-UPF-ratio-leads-to-lower-protein-and-increased-energy-intake-ratio-among-the-low-SES-group" class="headerlink" title="Aim 2：Whether increased UPF ratio leads to lower protein and increased energy intake ratio among the low-SES group"></a>Aim 2：Whether increased UPF ratio leads to lower protein and increased energy intake ratio among the low-SES group</h1><p>Increasing dietary proportion of UPF consumption was found to result in decreasing protein intake, demonstrated by the smoothed line (Figure 2). This indicated that increasing UPF consumption in the diet tends to dilute dietary protein intake. </p>
+<p>Moreover, increasing dietary proportion of UPF consumption was also associated with increasing energy intake, indicated by the smoothed line (Figure 3). This indicated that increasing dietary UPF consumption tends to increase energy intake. However, these findings were based on EDA and the relations were pairwise without any adjustments from other important confounding variables. Future studies should consider validating these findings by applying formal statistical tests. </p>
+<figure align="center">
+  <img src="https://i.328888.xyz/2022/12/09/foeta.png" alt="my alt text"/>
+  <figcaption>
+   <font size="2"> 
+   Figure 2. Relationship (smoothed) between UPF consumption and protein intake </font>
+  </figcaption>
+</figure>
+
+
+<figure align="center">
+  <img src="https://i.328888.xyz/2022/12/09/fo7Pw.png" alt="my alt text"/>
+  <figcaption>
+   <font size="2"> 
+   Figure 3. Relationship (smoothed) between UPF consumption and energy intaken </font>
+  </figcaption>
+</figure>
+
+<p>According to the protein leverage hypothesis, macronutrient regulation of relatively constant protein increased energy intake, potentially resulting in increased obesity risk (Martinez et al., 2018). Based on figures above, the protein leverage hypothesis was supported.</p>
+<h1 id="Aim-3-Whether-UPF-consumption-is-a-significant-contributor-to-obesity-in-low-SES-groups"><a href="#Aim-3-Whether-UPF-consumption-is-a-significant-contributor-to-obesity-in-low-SES-groups" class="headerlink" title="Aim 3: Whether UPF consumption is a significant contributor to obesity in low-SES groups"></a>Aim 3: Whether UPF consumption is a significant contributor to obesity in low-SES groups</h1><h2 id="Classification-Trees"><a href="#Classification-Trees" class="headerlink" title="Classification Trees"></a>Classification Trees</h2><p>The classification tree was firstly constructed to find if any biomedical variables significantly contributed to obesity within the low SES group. </p>
+<figure align="center">
+  <figcaption>
+   <font size="2"> 
+   Table 1. Classification trees based on different complexity parameter (cp) </font>
+  </figcaption>
+  <img src="https://i.328888.xyz/2022/12/09/fo6vk.png" alt="my alt text"/>
+</figure>
+
+<p>Table 1 suggests the suitability of choosing a cp value of 0.005 to plot the classification tree. This was used for classification tree model 1, with variable importance presented in Table 2 (left).  The model was then generalised via 10-fold cross validation, which showed a preferred cp around 0.004 in Figure 4. This was used in model 2, with the variable importance presented in Table 2 (right). </p>
+<figure align="center">
+  <img src="https://i.328888.xyz/2022/12/09/foGyL.png" alt="my alt text"/>
+  <figcaption>
+   <font size="2"> 
+   Figure 4. Model accuracy given different cp 
+   </font>
+  </figcaption>
+</figure>
+
+<p>Models built on these two slightly different cps are summarised in Table 2. BMI, measured weight, self-perceived body mass and systolic blood-pressure were identified as the five most important variables, whereas UPF consumption ranked eleventh with a relatively low importance of 10.45.</p>
+<figure align="center">
+  <figcaption>
+   <font size="2"> 
+   Table 2 The first 15 important variables from classification trees
+   </font>
+  </figcaption>
+  <img src="https://i.328888.xyz/2022/12/09/fodIp.png" alt="my alt text"/>
+</figure>
+
+<p>Other models including Random Forest, Logistic Regression, K Means Clustering, Neural Network, were also utilized. </p>
+<h1 id="Contributions-to-the-Project"><a href="#Contributions-to-the-Project" class="headerlink" title="Contributions to the Project"></a>Contributions to the Project</h1><p><a target="_blank" rel="noopener" href="http://imgloc.com/i/foLvF"><img src="https://i.328888.xyz/2022/12/09/foLvF.jpeg" alt="foLvF.jpeg"></a></p>
+<h1 id="Individual-Reflections"><a href="#Individual-Reflections" class="headerlink" title="Individual Reflections"></a>Individual Reflections</h1><ol>
+<li>What did I learn from being part of a team?</li>
+</ol>
+<p><strong>Teamwork skills, organisational and time management skills</strong></p>
+<p>The empathy for people helps reduce disharmony within a group. The due time of each step was always set in a group discussion and each member would have the opportunity to speak whether they were available then and we, as a group, would make adjustments accordingly. Even though I once did not finish my tasks by the due day due to the increasing number of quizzes during last few weeks of this semester, I communicated with the team, and they showed their empathy and comforted me. Most of the time, the meeting arranged after each ‘big step’ towards the final result does encourage us to finish our own tasks promptly. Because no one likes to report nothing during the meeting owing to their inability to complete their tasks. </p>
+<p><strong>Collaborative skills</strong></p>
+<p>Being responsive as a team member is critical in improving our work performance and quality. Timely response not only helps solve problems more quickly but also makes the person who raises the question knows I am caring, which potentially encourages that person to contribute more, forming good inner circulation. Personally, I think I acted properly in this regard. We have two members studying remotely from China where internet issues always lead to delayed message receiving and I would pass messages from Facebook Messenger onto them via WeChat to allow them to response or give their feedback in time. </p>
+<ol start="2">
+<li>What did I learn from completing the task?</li>
+</ol>
+<p><strong>Investigative skills</strong></p>
+<p>Since this is a cross-disciplinary subject, the team as a whole knows exactly what to expect from each person. STAT students would firstly inform NUTM students of the basic information about our dataset (i.e., the structure, the meaning of variables, the limitation etc). Then, NUTM students would completely be responsible for investigating any literature on our research question. They would explicitly raise their expectations and provide STAT students some charts that they suggested would help for our study. Given their expectations, datasets at hand and the knowledge we learnt from lectures, we would investigate further whether they were worth considering and available. Some results in the final report were delivered in this way. Also, STAT students explored the dataset and offered some research direction which would be further judged based on NUTM students’ professional knowledge. Once the research was done, we would start our analysis, construction methods of our models and their corresponding interpretation were explained to NUTM students during the meeting.</p>
+<p><strong>Thinking skills</strong></p>
+<p>NUTM students provided more valuable insights from a theoretical perspective while STAT students focused more on what could be achieved using the dataset at hand. This was well coordinated by the timely communication and exchange of views during the meeting. When looking through previous literature, NUTM students imagined how it would be suited to the dataset. Similarly, STAT students tried to adjust the analysis to the research question and theories if necessary.</p>
+</article><div class="tag_share"><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/07/20/beijing-fa-yuan-si/"><img class="prev-cover" src="https://cn.bing.com/th?id=OHR.HemakutaHill_ZH-CN7438439036_1920x1080.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">北京法源寺 读书笔记</div></div></a></div><div class="next-post pull-right"><a href="/2022/12/07/Learning-from-data/"><img class="next-cover" src="https://cn.bing.com/th?id=OHR.HemakutaHill_ZH-CN7438439036_1920x1080.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Elementary data analytics</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/12/07/Learning-from-data/" title="Elementary data analytics"><img class="cover" src="https://cn.bing.com/th?id=OHR.HemakutaHill_ZH-CN7438439036_1920x1080.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2023-09-13</div><div class="title">Elementary data analytics</div></div></a></div><div><a href="/2022/12/08/data-wrangling/" title="Data Wrangling - Preliminary analyes on Motor Vehicle Collisions dataset"><img class="cover" src="https://cn.bing.com/th?id=OHR.HemakutaHill_ZH-CN7438439036_1920x1080.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2023-09-13</div><div class="title">Data Wrangling - Preliminary analyes on Motor Vehicle Collisions dataset</div></div></a></div><div><a href="/2022/12/10/Investments-and-Portfolio-Management/" title="Investments and Portfolio Management"><img class="cover" src="https://cn.bing.com/th?id=OHR.HemakutaHill_ZH-CN7438439036_1920x1080.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2023-09-13</div><div class="title">Investments and Portfolio Management</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s2.loli.net/2022/07/01/pHyY9QSxgDkC4Ld.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Mingze (Tony) Gong</div><div class="author-info__description">Tony's learning</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:gong.mz@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Full-Report"><span class="toc-number">1.</span> <span class="toc-text">Full Report</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Final-Presentation"><span class="toc-number">2.</span> <span class="toc-text">Final Presentation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Abstract"><span class="toc-number">3.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Aim-1-Whether-low-SES-groups-consume-more-UPF-compared-to-other-SES-groups"><span class="toc-number">4.</span> <span class="toc-text">Aim 1: Whether low SES groups consume more UPF compared to other SES groups</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Aim-2%EF%BC%9AWhether-increased-UPF-ratio-leads-to-lower-protein-and-increased-energy-intake-ratio-among-the-low-SES-group"><span class="toc-number">5.</span> <span class="toc-text">Aim 2：Whether increased UPF ratio leads to lower protein and increased energy intake ratio among the low-SES group</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Aim-3-Whether-UPF-consumption-is-a-significant-contributor-to-obesity-in-low-SES-groups"><span class="toc-number">6.</span> <span class="toc-text">Aim 3: Whether UPF consumption is a significant contributor to obesity in low-SES groups</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Classification-Trees"><span class="toc-number">6.1.</span> <span class="toc-text">Classification Trees</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Contributions-to-the-Project"><span class="toc-number">7.</span> <span class="toc-text">Contributions to the Project</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Individual-Reflections"><span class="toc-number">8.</span> <span class="toc-text">Individual Reflections</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/09/13/linux-command/" title="Linux Command">Linux Command</a><time datetime="2023-09-13T15:08:09.000Z" title="Created 2023-09-13 23:08:09">2023-09-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/09/13/ubuntu-tinkering-log/" title="Ubuntu Tinkering Log">Ubuntu Tinkering Log</a><time datetime="2023-09-13T15:02:57.000Z" title="Created 2023-09-13 23:02:57">2023-09-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/09/13/hexo-cheat-sheet/" title="Hexo Cheat Sheet">Hexo Cheat Sheet</a><time datetime="2023-09-13T14:56:38.000Z" title="Created 2023-09-13 22:56:38">2023-09-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/09/13/blog-tinkering-log/" title="Blog Tinkering Log">Blog Tinkering Log</a><time datetime="2023-09-13T13:20:25.000Z" title="Created 2023-09-13 21:20:25">2023-09-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/04/solidity/" title="solidity">solidity</a><time datetime="2023-01-04T06:13:57.000Z" title="Created 2023-01-04 14:13:57">2023-01-04</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cn.bing.com/th?id=OHR.HemakutaHill_ZH-CN7438439036_1920x1080.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By Mingze (Tony) Gong</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
